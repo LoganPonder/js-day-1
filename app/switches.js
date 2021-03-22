@@ -7,7 +7,52 @@
     // output: 7
 
 function daysPosition(day, offset) {
-
+    switch(day) {
+        case 'monday':
+            if(offset === true) {
+                return 1;
+            } else {
+                return 2;
+            } break;
+        case 'tuesday':
+            if(offset === true) {
+                return 2;
+            } else {
+                return 3;
+            } break;
+        case 'wednesday':
+            if(offset === true) {
+                return 3;
+            } else {
+                return 4;
+            } break;
+        case 'thursday':
+            if(offset === true) {
+                return 4;
+            } else {
+                return 5;
+            } break;
+        case 'friday':
+            if(offset === true) {
+                return 5;
+            } else {
+                return 6;
+            } break;
+        case 'saturday':
+            if(offset === true) {
+                return 6;
+            } else {
+                return 7;
+            } break;
+        case 'sunday':
+            if(offset === true) {
+                return 7;
+            } else {
+                return 0;
+            } break;
+        default:
+            return 'That\'s not a day of the week';
+    }
 }
 
 
@@ -27,7 +72,30 @@ function daysPosition(day, offset) {
  */
 
  function golfScore(score, par) {
-
+     let t = score - par;
+    switch(t) {
+        case 1:
+        case -3:
+            return 'Ace';
+            break;
+        case -2:
+            return 'Eagle';
+            break;
+        case -1: 
+            return 'Birdie';
+            break;
+        case 0:
+            return 'Par';
+            break;
+        case 1:
+            return 'Bogie';
+            break;
+        case 2: 
+            return 'Double Bogie';
+            break;
+        default: 
+            return 'Ouch';
+    }
  }
  
 
@@ -52,5 +120,99 @@ function daysPosition(day, offset) {
 let count = 0
 
 function cardCounter(card) {
+    switch(card) {
+        case '2': 
+        count++;
+        if(count > 0) return `${count} Bet`;
+        if(count <= 0) return `${count} Hold`;
+        break;
+        case '3': 
+        count++;
+        if(count > 0) return `${count} Bet`;
+        if(count <= 0) return `${count} Hold`;
+        break;
+        case '4': 
+        count++;
+        if(count > 0) return `${count} Bet`;
+        if(count <= 0) return `${count} Hold`;
+        break;
+        case '5': 
+        count++;
+        if(count > 0) return `${count} Bet`;
+        if(count <= 0) return `${count} Hold`;
+        break;
+        case '6': 
+        count;
+        if(count > 0) return `${count} Bet`;
+        if(count <= 0) return `${count} Hold`;
+        break;
+        case '7': 
+        count;
+        if(count > 0) return `${count} Bet`;
+        if(count <= 0) return `${count} Hold`;
+        break;
+        case '8': 
+        count;
+        if(count > 0) return `${count} Bet`;
+        if(count <= 0) return `${count} Hold`;
+        break;
+        case '9': 
+        count--;
+        if(count > 0) return `${count} Bet`;
+        if(count <= 0) return `${count} Hold`;
+        break;
+        case '10': 
+        count--;
+        if(count > 0) return `${count} Bet`;
+        if(count <= 0) return `${count} Hold`;
+        break;
+        case 'J': 
+        count--;
+        if(count > 0) return `${count} Bet`;
+        if(count <= 0) return `${count} Hold`;
+        break;
+        case 'Q': 
+        count--;
+        if(count > 0) return `${count} Bet`;
+        if(count <= 0) return `${count} Hold`;
+        break;
+        case 'K': 
+        count--;
+        if(count > 0) return `${count} Bet`;
+        if(count <= 0) return `${count} Hold`;
+        break;
+        case 'A': 
+        count--;
+        if(count > 0) return `${count} Bet`;
+        if(count <= 0) return `${count} Hold`;
+        break;
+    }
 
+    // switch(card) {
+    //     case '2':
+    //     case '3':
+    //     case '4':
+    //     case '5':
+    //     case '6':
+    //         count++;
+    //         if(count > 0) return `${count} Bet`;
+    //         if(count <= 0) return `${count} Hold `;
+    //     break;
+    //     case '7':
+    //     case '8':
+    //     case '9':
+    //         count;
+    //         if(count > 0) return `${count} Bet `;
+    //         if(count <= 0) return `${count} Hold`;
+    //     break;
+    //     case '10':
+    //     case 'J':
+    //     case 'Q':
+    //     case 'K':
+    //     case 'A':
+    //         count--;
+    //         if(count > 0) return `${count} Bet`;
+    //         if(count <= 0) return `${count} Hold`;
+    //     break;
+    // }
 }
